@@ -28,11 +28,11 @@ export function WishlistButton({ product }: WishlistButtonProps) {
           ? `Remove ${product.title} from wishlist`
           : `Add ${product.title} to wishlist`
       }
-      className="inline-flex items-center gap-2 rounded-full bg-amber-300 px-4 py-3 text-sm font-semibold transition hover:bg-amber-200"
+      className="inline-flex items-center gap-2 rounded-full bg-secondary px-2 py-2 text-sm font-semibold transition hover:bg-primary text-white"
     >
       <svg
         viewBox="0 0 24 24"
-        className={`h-4 w-4 ${isInWishlist ? "" : "fill-none"} stroke-current stroke-2`}
+        className={`h-6 w-6 ${isInWishlist ? "" : "fill-none"} stroke-current stroke-2 fill-current`}
         aria-hidden="true"
       >
         <path

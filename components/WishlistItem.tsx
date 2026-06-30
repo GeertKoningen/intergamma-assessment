@@ -19,7 +19,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
 
   return (
     <li className="flex gap-3 rounded-2xl border border-white/10 p-3">
-      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-slate-800">
+      <div className="relative h-20 w-20 shrink-0 overflow-hidden">
         <Image
           src={item.product.image}
           alt={item.product.title}
@@ -31,7 +31,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
       <div className="min-w-0 flex-1 space-y-3">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="truncate text-sm font-semibold text-white">
+            <h3 className="truncate text-sm font-semibold">
               {item.product.title}
             </h3>
             <p className="text-sm text-slate-400">
@@ -42,7 +42,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
           <button
             type="button"
             onClick={() => removeFromWishlist(item.product.slug)}
-            className="rounded-full px-2 py-1 text-xs font-semibold text-slate-400 transition hover:bg-white/5 hover:text-white"
+            className="rounded-full px-2 py-1 text-xs font-semibold text-primary transition hover:bg-white/5 cursor-pointer"
           >
             verwijder
           </button>
@@ -52,15 +52,13 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
           <button
             type="button"
             onClick={() => decreaseQuantity(item.product.slug)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg text-white transition hover:bg-white/10"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-secondary hover:bg-primary text-white text-lg transition cursor-pointer"
             aria-label={`Decrease quantity for ${item.product.title}`}
           >
             -
           </button>
           <input
-            type="number"
             min={1}
-            inputMode="numeric"
             value={item.quantity}
             onChange={(event) => {
               const parsedQuantity = Number.parseInt(event.target.value, 10);
@@ -71,12 +69,12 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
               setQuantity(item.product.slug, parsedQuantity);
             }}
             aria-label={`Quantity for ${item.product.title}`}
-            className="h-9 w-16 rounded-full border border-white/10 bg-slate-900 text-center text-sm text-white"
+            className="h-9 w-16 rounded-full border border-white/10 bg-tertiary text-center text-sm text-black"
           />
           <button
             type="button"
             onClick={() => increaseQuantity(item.product.slug)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg text-white transition hover:bg-white/10"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-secondary hover:bg-primary text-white text-lg transition cursor-pointer"
             aria-label={`Increase quantity for ${item.product.title}`}
           >
             +

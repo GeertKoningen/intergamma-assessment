@@ -32,22 +32,13 @@ export function WishlistDrawer() {
         }
       }}
     >
-      <SheetContent side="right" className="border-white/10 shadow-2xl bg-wite">
+      <SheetContent side="right" className="border-white/10 shadow-2xl">
         <SheetHeader className="flex items-start justify-between gap-4 border-b border-white/10 px-6 py-5">
           <div>
-            <SheetTitle className="display-font text-3xl text-white">
+            <SheetTitle className="display-font text-3xl ">
               Favorieten ({totalItems})
             </SheetTitle>
           </div>
-
-          <SheetClose asChild>
-            <button
-              type="button"
-              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              Sluiten
-            </button>
-          </SheetClose>
         </SheetHeader>
 
         <div className="flex-1 overflow-y-auto px-6 py-5">
@@ -62,9 +53,7 @@ export function WishlistDrawer() {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
                 ♡
               </div>
-              <h3 className="display-font text-2xl text-white">
-                Geen favorieten
-              </h3>
+              <h3 className="display-font text-2xl ">Geen favorieten</h3>
               <p className="mt-2 max-w-sm text-sm leading-6 text-slate-400">
                 Voeg items toe vanuit het productoverzicht om bij te houden
                 welke producten je wilt vergelijken, opnieuw wilt bekijken of

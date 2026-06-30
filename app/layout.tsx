@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", ptSans.variable, "font-sans")}>
+    <html lang="en" className={cn("h-full", ptSans.variable)}>
       <body className="min-h-full bg-white overflow-x-hidden">
         <Providers>{children}</Providers>
       </body>

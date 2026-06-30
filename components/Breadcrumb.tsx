@@ -14,12 +14,6 @@ export function Breadcrumb({ categoryLabel, categoryHref }: BreadcrumbProps) {
             Home
           </Link>
         </li>
-        <li aria-hidden="true">/</li>
-        <li>
-          <Link href="/" className="hover:underline">
-            Producten
-          </Link>
-        </li>
         {categoryLabel && categoryHref ? (
           <>
             <li aria-hidden="true">/</li>

@@ -128,6 +128,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
   const value: WishlistContextType = {
     wishlist,
     totalItems: getItemCount(wishlist),
+    hasHydrated,
     addToWishlist,
     toggleWishlist,
     removeFromWishlist,

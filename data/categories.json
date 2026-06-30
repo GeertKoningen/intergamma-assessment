@@ -1,0 +1,42 @@
+[
+  {
+    "key": "paint",
+    "label": "Verf",
+    "imageUrl": "/categories/verf-category.avif"
+  },
+  {
+    "key": "tools",
+    "label": "Gereedschap",
+    "imageUrl": "/categories/gereedschap-category.avif"
+  },
+  {
+    "key": "isolation",
+    "label": "Isolatie",
+    "imageUrl": "/categories/isolatie-category.avif"
+  },
+  {
+    "key": "wood",
+    "label": "Hout",
+    "imageUrl": "/categories/hout-category.avif"
+  },
+  {
+    "key": "building-materials",
+    "label": "Bouwmaterialen",
+    "imageUrl": "/categories/bouwmaterialen-category.avif"
+  },
+  {
+    "key": "flooring-tiles",
+    "label": "Vloeren & tegels",
+    "imageUrl": "/categories/vloeren-category.avif"
+  },
+  {
+    "key": "window-coverings",
+    "label": "Raamdecoratie",
+    "imageUrl": "/categories/raamdecoratie-category.avif"
+  },
+  {
+    "key": "bathroom-kitchen",
+    "label": "Sanitair & keuken",
+    "imageUrl": "/categories/sanitair-category.avif"
+  }
+]

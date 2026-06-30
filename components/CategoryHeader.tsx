@@ -20,7 +20,7 @@ export function CategoryHeader({
       </p>
       <Link
         href="/"
-        className="mt-5 inline-flex text-sm font-semibold text-[#2ba3dc] hover:underline"
+        className="mt-5 inline-flex text-sm font-semibold hover:underline"
       >
         Terug naar categorieoverzicht
       </Link>

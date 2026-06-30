@@ -13,8 +13,9 @@ export function ProductDetail({ product }: { product: Product }) {
             alt={product.title}
             fill
             sizes="(min-width: 1024px) 58vw, 100vw"
+            loading="eager"
+            fetchPriority="high"
             className="object-cover"
-            priority
           />
         </div>
 

@@ -1,18 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import { CategoryList } from "@/components/CategoryList";
 
-jest.mock("swiper/modules", () => ({
-  Navigation: {},
-}));
+class ResizeObserverMock {
+  observe() {
+    // noop for tests
+  }
 
-jest.mock("swiper/react", () => ({
-  Swiper: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="swiper">{children}</div>
-  ),
-  SwiperSlide: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="swiper-slide">{children}</div>
-  ),
-}));
+  disconnect() {
+    // noop for tests
+  }
+}
+
+Object.defineProperty(window, "ResizeObserver", {
+  writable: true,
+  value: ResizeObserverMock,
+});
 
 jest.mock("@/components/CategoryCard", () => ({
   CategoryCard: ({ category }: { category: { label: string } }) => (

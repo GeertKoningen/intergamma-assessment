@@ -3,7 +3,15 @@ import Link from "next/link";
 import type { Category } from "@/lib/types";
 import { toCategorySlug } from "@/lib/categorySlug";
 
-export function CategoryCard({ category }: { category: Category }) {
+type CategoryCardProps = {
+  category: Category;
+  prioritizeImage?: boolean;
+};
+
+export function CategoryCard({
+  category,
+  prioritizeImage = false,
+}: CategoryCardProps) {
   return (
     <Link
       href={`/${toCategorySlug(category.label)}`}
@@ -17,6 +25,8 @@ export function CategoryCard({ category }: { category: Category }) {
             alt={category.label}
             fill
             sizes="(min-width: 640px) 220px, 190px"
+            loading={prioritizeImage ? "eager" : undefined}
+            fetchPriority={prioritizeImage ? "high" : undefined}
             className="object-cover transition duration-300 group-hover:scale-105"
           />
         </div>

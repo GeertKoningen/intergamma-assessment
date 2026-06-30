@@ -21,12 +21,12 @@
 		--header-nav_link_background-color: #fff;
         --text-color: #0b0b0b;
 		color-scheme: light;
-        --radius-xs: .125rem;
-        --radius-sm: .25rem;
-        --radius-md: .375rem;
-        --radius-lg: .5rem;
-        --radius-xl: .75rem;
-        --radius-3xl: 1.5rem;
+        --rounded-xs: .125rem;
+        --rounded-sm: .25rem;
+        --rounded-md: .375rem;
+        --rounded-lg: .5rem;
+        --rounded-xl: .75rem;
+        --rounded-3xl: 1.5rem;
 		--popover: #fff;
 		--popover-foreground: #000;
 
@@ -86,25 +86,29 @@
 	}
 }
 
-@utility shadow-dark {
+.shadow-dark {
 	box-shadow: 0 10px 30px 0 #00000066;
 }
 
-@utility bg-primary {
+.bg-primary {
 	background-color: var(--primary-color);
 }
 
-@utility text-primary {
+.text-primary {
 	color: var(--primary-color);
 }
 
-@utility bg-secondary {
+.bg-secondary {
 	background-color: var(--secondary-color);
 }
 
-@utility bg-tertiary {
+.bg-tertiary {
 	background-color: var(--tertiary-color);
 }
+
+.rounded-lg {
+	border-radius: var(--rounded-lg);
+}	
 
 @theme inline {
 	--font-heading: var(--font-sans);

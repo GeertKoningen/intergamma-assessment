@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { WishlistTrigger } from "@/components/WishlistTrigger";
 
 export function Header() {
   return (
     <header className="shadow sticky top-0 z-30 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="flex items-center"
           aria-label="Intergamma home"
         >
@@ -15,10 +16,11 @@ export function Header() {
             alt="Intergamma"
             width={210}
             height={42}
-            priority
+            loading="eager"
+            fetchPriority="high"
             className="h-auto w-[150px] sm:w-[190px]"
           />
-        </a>
+        </Link>
 
         <WishlistTrigger />
       </div>

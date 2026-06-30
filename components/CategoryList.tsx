@@ -1,25 +1,74 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperInstance } from "swiper/types";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Category } from "@/lib/types";
 import { CategoryCard } from "@/components/CategoryCard";
 
 export function CategoryList({ categories }: { categories: Category[] }) {
-  const prevButtonRef = useRef<HTMLButtonElement | null>(null);
-  const nextButtonRef = useRef<HTMLButtonElement | null>(null);
-  const [isBeginning, setIsBeginning] = useState(true);
-  const [isEnd, setIsEnd] = useState(false);
+  const scrollerRef = useRef<HTMLUListElement | null>(null);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(categories.length > 1);
 
-  const syncNavigationState = (swiper: SwiperInstance) => {
-    setIsBeginning(swiper.isBeginning);
-    setIsEnd(swiper.isEnd);
+  const syncScrollState = useCallback(() => {
+    const scroller = scrollerRef.current;
+
+    if (!scroller) {
+      return;
+    }
+
+    const { scrollLeft, clientWidth, scrollWidth } = scroller;
+
+    setCanScrollPrev(scrollLeft > 2);
+
+    // JSDOM doesn't calculate layout widths, so preserve meaningful button state in tests.
+    if (clientWidth === 0 || scrollWidth === 0) {
+      setCanScrollNext(categories.length > 1);
+      return;
+    }
+
+    setCanScrollNext(scrollLeft + clientWidth < scrollWidth - 2);
+  }, [categories.length]);
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+
+    if (!scroller) {
+      return;
+    }
+
+    syncScrollState();
+
+    const handleScroll = () => {
+      syncScrollState();
+    };
+
+    scroller.addEventListener("scroll", handleScroll, { passive: true });
+
+    const observer = new ResizeObserver(() => {
+      syncScrollState();
+    });
+
+    observer.observe(scroller);
+
+    return () => {
+      scroller.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
+  }, [syncScrollState]);
+
+  const scrollByCards = (direction: "prev" | "next") => {
+    const scroller = scrollerRef.current;
+
+    if (!scroller) {
+      return;
+    }
+
+    const amount = Math.max(scroller.clientWidth * 0.9, 220);
+
+    scroller.scrollBy({
+      left: direction === "next" ? amount : -amount,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -39,11 +88,11 @@ export function CategoryList({ categories }: { categories: Category[] }) {
         <div className="flex items-center justify-between gap-3 border-b border-[#ececec] px-4 py-4">
           <div className="flex items-center gap-2">
             <button
-              ref={prevButtonRef}
               type="button"
               aria-label="Previous categories"
               className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
-              disabled={isBeginning}
+              onClick={() => scrollByCards("prev")}
+              disabled={!canScrollPrev}
             >
               <svg
                 viewBox="0 0 24 24"
@@ -58,11 +107,11 @@ export function CategoryList({ categories }: { categories: Category[] }) {
               </svg>
             </button>
             <button
-              ref={nextButtonRef}
               type="button"
               aria-label="Next categories"
               className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
-              disabled={isEnd}
+              onClick={() => scrollByCards("next")}
+              disabled={!canScrollNext}
             >
               <svg
                 viewBox="0 0 24 24"
@@ -80,35 +129,22 @@ export function CategoryList({ categories }: { categories: Category[] }) {
         </div>
 
         <div className="px-4 py-4">
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={16}
-            slidesPerView="auto"
-            watchOverflow
-            onBeforeInit={(swiper) => {
-              const navigation = swiper.params.navigation;
-
-              if (!navigation || typeof navigation === "boolean") {
-                return;
-              }
-
-              navigation.prevEl = prevButtonRef.current;
-              navigation.nextEl = nextButtonRef.current;
-            }}
-            onSwiper={syncNavigationState}
-            onSlideChange={syncNavigationState}
-            onResize={syncNavigationState}
-            className="!overflow-visible"
+          <ul
+            ref={scrollerRef}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {categories.map((category) => (
-              <SwiperSlide
+              <li
                 key={category.key}
-                className="!w-[190px] sm:!w-[220px]"
+                className="w-[190px] shrink-0 snap-start sm:w-[220px]"
               >
-                <CategoryCard category={category} />
-              </SwiperSlide>
+                <CategoryCard
+                  category={category}
+                  prioritizeImage={category.key === categories[0]?.key}
+                />
+              </li>
             ))}
-          </Swiper>
+          </ul>
         </div>
       </div>
     </section>

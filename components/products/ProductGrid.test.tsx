@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { ProductGrid } from "@/components/ProductGrid";
+import { ProductGrid } from "@/components/products/ProductGrid";
 
-jest.mock("@/components/ProductCard", () => ({
+jest.mock("@/components/products/ProductCard", () => ({
   ProductCard: ({
     product,
     categoryLabel,

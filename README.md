@@ -1,14 +1,18 @@
 # Intergamma Assessment
 
-Next.js 16 + TypeScript assessment project with category and product pages.
+Next.js 16 + TypeScript assessment project with a Product Listing Page and a
+persistent wishlist side panel.
 
 ## Overview
 
 This app renders:
 
-- A homepage with a category carousel.
-- Category detail pages at `/:categorySlug`.
-- Product grid results per category.
+- A server-rendered homepage Product Listing Page backed by `data/products.json`.
+- A wishlist widget with add/remove controls, quantity editing, a header badge,
+  and persistence through `localStorage`.
+- A side panel wishlist overlay opened from the favorites button in the header.
+- Category detail pages at `/:categorySlug` with product grid results per
+  category.
 
 Core data sources:
 
@@ -109,7 +113,11 @@ npm run start
 ## Project Structure
 
 - `app/`: App Router pages and layout.
-- `components/`: UI components and component unit tests.
+- `components/categories/`: Category navigation components and tests.
+- `components/layout/`: Shared layout and navigation components.
+- `components/products/`: Product listing/detail components and tests.
+- `components/wishlist/`: Wishlist trigger, drawer, item controls, and tests.
+- `components/ui/`: Generic UI primitives.
 - `context/`: Shared React context.
 - `hooks/`: Custom hooks.
 - `lib/`: Shared utilities, types, and unit tests.
@@ -118,5 +126,18 @@ npm run start
 
 ## Notes
 
+- Product and category data are imported from local JSON in Server Components, so
+  the initial product listing can be rendered on the server.
+- Wishlist interactions are isolated in Client Components because they depend on
+  browser-only state, dialog interactions, and `localStorage`.
 - Dynamic category routes are statically generated from category labels.
 - Category slugs are normalized by `lib/categorySlug.ts`.
+- The wishlist drawer uses Radix Dialog primitives for focus management, escape
+  handling, ARIA semantics, and keyboard navigation.
+
+## Technical Choices
+
+- The product listing is rendered as a Server Component using local JSON data.
+- Wishlist state is handled in Client Components because it depends on browser state and localStorage.
+- The side panel uses Radix Dialog primitives for focus trapping, escape handling, and ARIA semantics.
+- Product and wishlist controls avoid nested interactive elements to support keyboard navigation.

@@ -3,11 +3,13 @@
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useWishlist } from "@/hooks/useWishlist";
-import { WishlistItem } from "@/components/WishlistItem";
+import { WishlistItem } from "@/components/wishlist/WishlistItem";
+import { Heart } from "lucide-react";
 
 const currencyFormatter = new Intl.NumberFormat("nl-NL", {
   style: "currency",
@@ -31,12 +33,15 @@ export function WishlistDrawer() {
         }
       }}
     >
-      <SheetContent side="right" className="border-white/10 shadow-2xl">
-        <SheetHeader className="flex items-start justify-between gap-4 border-b border-white/10 px-6 py-5">
+      <SheetContent side="right" className="border-slate-200 shadow-2xl">
+        <SheetHeader className="flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-5">
           <div>
-            <SheetTitle className="display-font text-3xl ">
+            <SheetTitle className="display-font text-3xl">
               Favorieten ({totalItems})
             </SheetTitle>
+            <SheetDescription>
+              Beheer je bewaarde producten en pas aantallen aan.
+            </SheetDescription>
           </div>
         </SheetHeader>
 
@@ -48,12 +53,12 @@ export function WishlistDrawer() {
               ))}
             </ul>
           ) : (
-            <div className="flex h-full min-h-[20rem] flex-col items-center justify-center rounded-3xl border border-dashed border-white/10 bg-white/5 p-8 text-center">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
-                ♡
+            <div className="flex h-full min-h-[20rem] flex-col items-center justify-center rounded-lg border border-dashed border-slate-200 bg-slate-50 p-8 text-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white text-primary">
+                <Heart className="h-8 w-8" aria-hidden="true" />
               </div>
-              <h3 className="display-font text-2xl ">Geen favorieten</h3>
-              <p className="mt-2 max-w-sm text-sm leading-6 text-slate-400">
+              <h3 className="display-font text-2xl">Geen favorieten</h3>
+              <p className="mt-2 max-w-sm text-sm leading-6 text-slate-500">
                 Voeg items toe vanuit het productoverzicht om bij te houden
                 welke producten je wilt vergelijken, opnieuw wilt bekijken of
                 later wilt kopen.
@@ -62,10 +67,10 @@ export function WishlistDrawer() {
           )}
         </div>
 
-        <div className="border-t border-white/10 px-6 py-5">
-          <div className="flex items-center justify-between text-sm text-slate-300">
+        <div className="border-t border-slate-200 px-6 py-5">
+          <div className="flex items-center justify-between text-sm text-slate-600">
             <span>Totaal</span>
-            <span className="text-lg font-semibold">
+            <span className="text-lg font-semibold text-slate-950">
               {currencyFormatter.format(totalPrice)}
             </span>
           </div>

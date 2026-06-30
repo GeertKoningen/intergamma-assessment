@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/layout/Header";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 
@@ -35,7 +35,7 @@ describe("Header", () => {
     expect(screen.getByAltText("Intergamma")).toBeInTheDocument();
 
     const wishlistButton = screen.getByRole("button", {
-      name: "Open wishlist, 2 items",
+      name: "Bekijk wensenlijst, 2 artikelen",
     });
     expect(wishlistButton).toHaveAttribute("aria-expanded", "false");
     expect(screen.getByText("2")).toBeInTheDocument();

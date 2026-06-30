@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CategoryCard } from "@/components/CategoryCard";
+import { CategoryCard } from "@/components/categories/CategoryCard";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 

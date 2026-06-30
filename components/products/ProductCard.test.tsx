@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard } from "@/components/products/ProductCard";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 
-jest.mock("@/components/WishlistButton", () => ({
+jest.mock("@/components/wishlist/WishlistButton", () => ({
   WishlistButton: ({ product }: { product: { title: string } }) => (
     <button type="button">Add {product.title} to wishlist</button>
   ),
@@ -36,7 +36,6 @@ describe("ProductCard", () => {
           slug: "boormachine",
           category: "Gereedschap",
         }}
-        categoryLabel="Gereedschap"
       />,
     );
 

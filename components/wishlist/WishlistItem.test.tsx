@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { WishlistItem } from "@/components/WishlistItem";
+import { WishlistItem } from "@/components/wishlist/WishlistItem";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 
@@ -66,17 +66,17 @@ describe("WishlistItem", () => {
     expect(removeFromWishlistMock).toHaveBeenCalledWith("boormachine");
 
     fireEvent.click(
-      screen.getByRole("button", { name: "Increase quantity for Boormachine" }),
+      screen.getByRole("button", { name: "Bestel nog een Boormachine" }),
     );
     expect(increaseQuantityMock).toHaveBeenCalledWith("boormachine");
 
     fireEvent.click(
-      screen.getByRole("button", { name: "Decrease quantity for Boormachine" }),
+      screen.getByRole("button", { name: "Verlaag aantal voor Boormachine" }),
     );
     expect(decreaseQuantityMock).toHaveBeenCalledWith("boormachine");
 
-    const quantityInput = screen.getByRole("textbox", {
-      name: "Quantity for Boormachine",
+    const quantityInput = screen.getByRole("spinbutton", {
+      name: "Aantal voor Boormachine",
     });
     fireEvent.change(quantityInput, { target: { value: "5" } });
 

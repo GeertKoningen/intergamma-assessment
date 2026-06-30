@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Category } from "@/lib/types";
-import { CategoryCard } from "@/components/CategoryCard";
+import { CategoryCard } from "@/components/categories/CategoryCard";
 
 export function CategoryList({ categories }: { categories: Category[] }) {
   const scrollerRef = useRef<HTMLUListElement | null>(null);
@@ -72,11 +72,11 @@ export function CategoryList({ categories }: { categories: Category[] }) {
   };
 
   return (
-    <section aria-labelledby="categories-heading" className="space-y-4 ">
+    <section aria-labelledby="categorie-kop" className="space-y-4 ">
       <div className="flex items-end justify-between gap-4">
         <div>
           <h2
-            id="categories-heading"
+            id="categorie-kop"
             className="display-font text-3xl text-slate-900 sm:text-4xl"
           >
             Categorieën
@@ -89,7 +89,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
           <div className="flex items-center gap-2">
             <button
               type="button"
-              aria-label="Previous categories"
+              aria-label="Vorige categorieën"
               className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
               onClick={() => scrollByCards("prev")}
               disabled={!canScrollPrev}
@@ -108,7 +108,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
             </button>
             <button
               type="button"
-              aria-label="Next categories"
+              aria-label="Volgende categorieën"
               className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
               onClick={() => scrollByCards("next")}
               disabled={!canScrollNext}

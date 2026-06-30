@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Product } from "@/lib/types";
-import { WishlistButton } from "@/components/WishlistButton";
+import { WishlistButton } from "@/components/wishlist/WishlistButton";
 import { Pricetag } from "./Pricetag";
 
 export function ProductDetail({ product }: { product: Product }) {

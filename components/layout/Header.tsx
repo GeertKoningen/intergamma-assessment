@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { WishlistTrigger } from "@/components/WishlistTrigger";
+import { WishlistTrigger } from "@/components/wishlist/WishlistTrigger";
 
 export function Header() {
   return (

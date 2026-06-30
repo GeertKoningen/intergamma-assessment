@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import categoriesData from "@/data/categories.json";
 import productsData from "@/data/products.json";
-import { Breadcrumb } from "@/components/Breadcrumb";
-import { Header } from "@/components/Header";
-import { ProductDetail } from "@/components/ProductDetail";
+import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { Header } from "@/components/layout/Header";
+import { ProductDetail } from "@/components/products/ProductDetail";
 import { toCategorySlug } from "@/lib/categorySlug";
 import type { Category, Product } from "@/lib/types";
 

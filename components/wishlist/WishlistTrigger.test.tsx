@@ -1,5 +1,5 @@
 import { act, render, screen } from "@testing-library/react";
-import { WishlistTrigger } from "@/components/WishlistTrigger";
+import { WishlistTrigger } from "@/components/wishlist/WishlistTrigger";
 
 const openDrawerMock = jest.fn();
 
@@ -37,7 +37,7 @@ describe("WishlistTrigger", () => {
     rerender(<WishlistTrigger />);
 
     const trigger = screen.getByRole("button", {
-      name: "Open wishlist, 0 items",
+      name: "Bekijk wensenlijst, 0 artikelen",
     });
     expect(trigger).not.toHaveClass("animate-wishlist-trigger-highlight");
 
@@ -45,7 +45,7 @@ describe("WishlistTrigger", () => {
     rerender(<WishlistTrigger />);
 
     expect(
-      screen.getByRole("button", { name: "Open wishlist, 1 items" }),
+      screen.getByRole("button", { name: "Bekijk wensenlijst, 1 artikelen" }),
     ).toHaveClass("animate-wishlist-trigger-highlight");
 
     act(() => {
@@ -53,7 +53,7 @@ describe("WishlistTrigger", () => {
     });
 
     expect(
-      screen.getByRole("button", { name: "Open wishlist, 1 items" }),
+      screen.getByRole("button", { name: "Bekijk wensenlijst, 1 artikelen" }),
     ).not.toHaveClass("animate-wishlist-trigger-highlight");
   });
 
@@ -65,7 +65,7 @@ describe("WishlistTrigger", () => {
     rerender(<WishlistTrigger />);
 
     expect(
-      screen.getByRole("button", { name: "Open wishlist, 3 items" }),
+      screen.getByRole("button", { name: "Bekijk wensenlijst, 3 artikelen" }),
     ).not.toHaveClass("animate-wishlist-trigger-highlight");
   });
 });

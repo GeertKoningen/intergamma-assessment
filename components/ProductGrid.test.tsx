@@ -2,8 +2,16 @@ import { render, screen } from "@testing-library/react";
 import { ProductGrid } from "@/components/ProductGrid";
 
 jest.mock("@/components/ProductCard", () => ({
-  ProductCard: ({ product }: { product: { title: string } }) => (
-    <article data-testid="product-card">{product.title}</article>
+  ProductCard: ({
+    product,
+    categoryLabel,
+  }: {
+    product: { title: string };
+    categoryLabel: string;
+  }) => (
+    <article data-testid="product-card">
+      {product.title} ({categoryLabel})
+    </article>
   ),
 }));
 
@@ -37,7 +45,7 @@ describe("ProductGrid", () => {
       screen.getByRole("region", { name: "Producten voor Gereedschap" }),
     ).toBeInTheDocument();
     expect(screen.getAllByTestId("product-card")).toHaveLength(2);
-    expect(screen.getByText("Boormachine")).toBeInTheDocument();
-    expect(screen.getByText("Schroevendraaier")).toBeInTheDocument();
+    expect(screen.getByText(/Boormachine/)).toBeInTheDocument();
+    expect(screen.getByText(/Schroevendraaier/)).toBeInTheDocument();
   });
 });

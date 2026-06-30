@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PT_Sans } from "next/font/google";
+import { Providers } from "./providers";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const ptSans = PT_Sans({
   subsets: ["latin"],
@@ -24,8 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full ${ptSans.variable}`}>
-      <body className="min-h-full bg-white">{children}</body>
+    <html lang="en" className={cn("h-full", ptSans.variable, "font-sans")}>
+      <body className="min-h-full bg-white">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

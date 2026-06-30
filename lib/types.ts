@@ -22,6 +22,7 @@ export interface WishlistContextType {
   wishlist: WishlistItem[];
   totalItems: number;
   addToWishlist: (product: Product) => void;
+  toggleWishlist: (product: Product) => void;
   removeFromWishlist: (slug: string) => void;
   increaseQuantity: (slug: string) => void;
   decreaseQuantity: (slug: string) => void;

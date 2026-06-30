@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import type { Category } from "@/lib/types";
@@ -9,11 +7,11 @@ export function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       href={`/${toCategorySlug(category.label)}`}
-      className="shadow group block h-full overflow-hidden rounded-lg border border-[#ececec] bg-white transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2ba3dc] focus-visible:ring-offset-2"
+      className="shadow hover:shadow-dark group block h-full  rounded-lg border border-[#ececec] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2"
       aria-label={`Bekijk categorie ${category.label}`}
     >
       <article>
-        <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+        <div className="relative aspect-[4/3]  bg-slate-100">
           <Image
             src={category.image}
             alt={category.label}

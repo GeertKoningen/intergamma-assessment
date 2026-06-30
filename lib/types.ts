@@ -20,10 +20,12 @@ export interface WishlistItem {
 
 export interface WishlistContextType {
   wishlist: WishlistItem[];
-  addToWishlist: (item: WishlistItem) => void;
-  removeFromWishlist: (item: WishlistItem) => void;
+  totalItems: number;
+  addToWishlist: (product: Product) => void;
+  removeFromWishlist: (slug: string) => void;
   increaseQuantity: (slug: string) => void;
   decreaseQuantity: (slug: string) => void;
+  setQuantity: (slug: string, quantity: number) => void;
   isDrawerOpen: boolean;
   openDrawer: () => void;
   closeDrawer: () => void;

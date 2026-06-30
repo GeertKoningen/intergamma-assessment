@@ -1,2 +1,52 @@
 @import "tailwindcss";
 
+@layer base {
+	:root {
+		--primary-color: #e03126;
+		--secondary-color: #2ba3dc;
+		--accent-color: #2ba3dc;
+		--heading-color: #e03126;
+		--hyperlink-color: #694287;
+		--navigation_font-family: "PT Sans", sans-serif;
+		--heading_font-family: "PT Sans", sans-serif;
+		--content_font-family: "PT Sans", sans-serif;
+		--h1_hero_font-weight: 700;
+		--h1_font-weight: 700;
+		--button_color: #ffffff;
+		--header-nav_link_background-color: #fff;
+        --text-color: #0b0b0b;
+		color-scheme: light;
+        --radius-xs: .125rem;
+        --radius-sm: .25rem;
+        --radius-md: .375rem;
+        --radius-lg: .5rem;
+        --radius-xl: .75rem;
+        --radius-3xl: 1.5rem;
+	}
+
+	html {
+		min-height: 100%;
+		background: #fff;
+	}
+
+	body {
+		min-height: 100vh;
+		font-family: var(--content_font-family);
+		background: #fff;
+		color: var(--text-color);
+	}
+
+	h1,
+	h2,
+	h3,
+	.display-font {
+		font-family: var(--heading_font-family);
+		font-weight: var(--h1_font-weight);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--secondary-color);
+		outline-offset: 3px;
+	}
+}
+

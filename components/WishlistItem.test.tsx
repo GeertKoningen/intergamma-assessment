@@ -7,6 +7,7 @@ const increaseQuantityMock = jest.fn();
 const decreaseQuantityMock = jest.fn();
 const removeFromWishlistMock = jest.fn();
 const setQuantityMock = jest.fn();
+const closeDrawerMock = jest.fn();
 
 jest.mock("next/image", () => ({
   __esModule: true,
@@ -29,11 +30,14 @@ jest.mock("@/hooks/useWishlist", () => ({
     decreaseQuantity: decreaseQuantityMock,
     removeFromWishlist: removeFromWishlistMock,
     setQuantity: setQuantityMock,
+    closeDrawer: closeDrawerMock,
   }),
 }));
 
 describe("WishlistItem", () => {
   it("renders item and triggers quantity and remove actions", () => {
+    closeDrawerMock.mockClear();
+
     render(
       <WishlistItem
         item={{
@@ -53,6 +57,11 @@ describe("WishlistItem", () => {
     expect(screen.getByText("Boormachine")).toBeInTheDocument();
     expect(screen.getByText("€ 79,99")).toBeInTheDocument();
 
+    fireEvent.click(
+      screen.getAllByRole("link", { name: "Bekijk product Boormachine" })[0],
+    );
+    expect(closeDrawerMock).toHaveBeenCalledTimes(1);
+
     fireEvent.click(screen.getByRole("button", { name: "verwijder" }));
     expect(removeFromWishlistMock).toHaveBeenCalledWith("boormachine");
 
@@ -66,7 +75,7 @@ describe("WishlistItem", () => {
     );
     expect(decreaseQuantityMock).toHaveBeenCalledWith("boormachine");
 
-    const quantityInput = screen.getByRole("spinbutton", {
+    const quantityInput = screen.getByRole("textbox", {
       name: "Quantity for Boormachine",
     });
     fireEvent.change(quantityInput, { target: { value: "5" } });

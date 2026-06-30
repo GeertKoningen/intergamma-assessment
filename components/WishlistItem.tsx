@@ -3,6 +3,7 @@
 import Image from "next/image";
 import type { WishlistItem as WishlistItemType } from "@/lib/types";
 import { useWishlist } from "@/hooks/useWishlist";
+import Link from "next/link";
 
 const currencyFormatter = new Intl.NumberFormat("nl-NL", {
   style: "currency",
@@ -15,28 +16,45 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
     decreaseQuantity,
     removeFromWishlist,
     setQuantity,
+    closeDrawer,
   } = useWishlist();
+
+  const handleProductLinkClick = () => {
+    closeDrawer();
+  };
 
   return (
     <li className="flex gap-3 rounded-2xl border border-white/10 p-3">
       <div className="relative h-20 w-20 shrink-0 overflow-hidden">
-        <Image
-          src={item.product.image}
-          alt={item.product.title}
-          fill
-          className="object-cover"
-        />
+        <Link
+          href={`/producten/${item.product.slug}`}
+          aria-label={`Bekijk product ${item.product.title}`}
+          onClick={handleProductLinkClick}
+        >
+          <Image
+            src={item.product.image}
+            alt={item.product.title}
+            fill
+            className="object-cover"
+          />
+        </Link>
       </div>
 
       <div className="min-w-0 flex-1 space-y-3">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="truncate text-sm font-semibold">
-              {item.product.title}
-            </h3>
-            <p className="text-sm text-slate-400">
-              {currencyFormatter.format(item.product.price)}
-            </p>
+            <Link
+              href={`/producten/${item.product.slug}`}
+              aria-label={`Bekijk product ${item.product.title}`}
+              onClick={handleProductLinkClick}
+            >
+              <h3 className="truncate text-sm font-semibold">
+                {item.product.title}
+              </h3>
+              <p className="text-sm text-slate-400">
+                {currencyFormatter.format(item.product.price)}
+              </p>
+            </Link>
           </div>
 
           <button

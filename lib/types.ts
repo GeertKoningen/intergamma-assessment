@@ -21,6 +21,7 @@ export interface WishlistItem {
 export interface WishlistContextType {
   wishlist: WishlistItem[];
   totalItems: number;
+  hasHydrated?: boolean;
   addToWishlist: (product: Product) => void;
   toggleWishlist: (product: Product) => void;
   removeFromWishlist: (slug: string) => void;

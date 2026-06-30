@@ -25,8 +25,9 @@ export function ProductDetail({ product }: { product: Product }) {
           <p className="text-sm leading-7 text-slate-600">
             {product.description}
           </p>
-          <WishlistButton product={product} />
-
+          <p>
+            <WishlistButton product={product} />
+          </p>
           <div className="mt-auto pt-4">
             <Pricetag price={product.price} />
           </div>

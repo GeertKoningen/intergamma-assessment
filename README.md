@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Intergamma Assessment
 
-## Getting Started
+Next.js 16 + TypeScript assessment project with category and product pages.
 
-First, run the development server:
+## Overview
+
+This app renders:
+
+- A homepage with a category carousel.
+- Category detail pages at `/:categorySlug`.
+- Product grid results per category.
+
+Core data sources:
+
+- `data/categories.json`
+- `data/products.json`
+
+## Requirements
+
+- Node.js 20+
+- npm 10+
+
+## Installation
+
+Install all dependencies from `package.json` with:
+
+```bash
+npm install
+```
+
+What this does:
+
+- Downloads and installs runtime dependencies into `node_modules`.
+- Downloads and installs development tools (TypeScript, ESLint, Jest, Testing Library, etc.).
+- Uses `package-lock.json` to install exact locked versions for consistent local setup.
+
+## Run The App
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Unit Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Unit tests are implemented with Jest + Testing Library.
 
-## Learn More
+Run all unit tests once:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run unit tests in watch mode (re-runs tests on file changes):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run test:watch
+```
 
-## Deploy on Vercel
+Run unit tests with coverage output:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run test:coverage
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Current component tests are in `components/*.test.tsx` and utility tests are in `lib/*.test.ts`.
+
+## Other Scripts
+
+Lint:
+
+```bash
+npm run lint
+```
+
+Lint and auto-fix:
+
+```bash
+npm run lint:fix
+```
+
+Format check:
+
+```bash
+npm run format
+```
+
+Format write:
+
+```bash
+npm run format:write
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
+Run production server (after build):
+
+```bash
+npm run start
+```
+
+## Project Structure
+
+- `app/`: App Router pages and layout.
+- `components/`: UI components and component unit tests.
+- `context/`: Shared React context.
+- `hooks/`: Custom hooks.
+- `lib/`: Shared utilities, types, and unit tests.
+- `data/`: Static JSON data sources.
+- `public/`: Static assets.
+
+## Notes
+
+- Dynamic category routes are statically generated from category labels.
+- Category slugs are normalized by `lib/categorySlug.ts`.

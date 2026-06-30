@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CategoryList } from "@/components/CategoryList";
+import { CategoryList } from "@/components/categories/CategoryList";
 
 class ResizeObserverMock {
   observe() {
@@ -16,7 +16,7 @@ Object.defineProperty(window, "ResizeObserver", {
   value: ResizeObserverMock,
 });
 
-jest.mock("@/components/CategoryCard", () => ({
+jest.mock("@/components/categories/CategoryCard", () => ({
   CategoryCard: ({ category }: { category: { label: string } }) => (
     <div data-testid="category-card">{category.label}</div>
   ),

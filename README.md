@@ -113,7 +113,11 @@ npm run start
 ## Project Structure
 
 - `app/`: App Router pages and layout.
-- `components/`: UI components and component unit tests.
+- `components/categories/`: Category navigation components and tests.
+- `components/layout/`: Shared layout and navigation components.
+- `components/products/`: Product listing/detail components and tests.
+- `components/wishlist/`: Wishlist trigger, drawer, item controls, and tests.
+- `components/ui/`: Generic UI primitives.
 - `context/`: Shared React context.
 - `hooks/`: Custom hooks.
 - `lib/`: Shared utilities, types, and unit tests.
@@ -130,3 +134,10 @@ npm run start
 - Category slugs are normalized by `lib/categorySlug.ts`.
 - The wishlist drawer uses Radix Dialog primitives for focus management, escape
   handling, ARIA semantics, and keyboard navigation.
+
+## Technical Choices
+
+- The product listing is rendered as a Server Component using local JSON data.
+- Wishlist state is handled in Client Components because it depends on browser state and localStorage.
+- The side panel uses Radix Dialog primitives for focus trapping, escape handling, and ARIA semantics.
+- Product and wishlist controls avoid nested interactive elements to support keyboard navigation.

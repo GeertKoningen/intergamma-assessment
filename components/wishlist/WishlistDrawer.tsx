@@ -8,7 +8,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useWishlist } from "@/hooks/useWishlist";
-import { WishlistItem } from "@/components/WishlistItem";
+import { WishlistItem } from "@/components/wishlist/WishlistItem";
 import { Heart } from "lucide-react";
 
 const currencyFormatter = new Intl.NumberFormat("nl-NL", {

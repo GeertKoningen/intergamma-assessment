@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/lib/types";
-import { Pricetag } from "@/components/Pricetag";
-import { WishlistButton } from "@/components/WishlistButton";
+import { Pricetag } from "@/components/products/Pricetag";
+import { WishlistButton } from "@/components/wishlist/WishlistButton";
 
 type ProductCardProps = {
   product: Product;

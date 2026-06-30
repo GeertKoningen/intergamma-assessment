@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { WishlistItem } from "@/components/WishlistItem";
+import { WishlistItem } from "@/components/wishlist/WishlistItem";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 

@@ -1,5 +1,5 @@
 import type { Product } from "@/lib/types";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard } from "@/components/products/ProductCard";
 
 export function ProductGrid({
   products,
@@ -9,7 +9,10 @@ export function ProductGrid({
   categoryLabel: string;
 }) {
   return (
-    <section aria-label={`Producten voor ${categoryLabel}`}>
+    <section
+      aria-label={`Producten voor ${categoryLabel}`}
+      className="space-y-3 w-full mx-auto max-w-7xl"
+    >
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
           <li key={product.slug}>

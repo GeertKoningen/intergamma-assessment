@@ -1,9 +1,9 @@
 import categoriesData from "@/data/categories.json";
 import productsData from "@/data/products.json";
 import type { Category, Product } from "@/lib/types";
-import { Header } from "@/components/Header";
-import { CategoryList } from "@/components/CategoryList";
-import { ProductGrid } from "@/components/ProductGrid";
+import { CategoryList } from "@/components/categories/CategoryList";
+import { Header } from "@/components/layout/Header";
+import { ProductGrid } from "@/components/products/ProductGrid";
 
 const categories = categoriesData as Category[];
 const products = productsData as Product[];
@@ -20,6 +20,11 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase text-primary">
             Intergamma assortiment
           </p>
+        </section>
+
+        <CategoryList categories={categories} />
+
+        <section className="space-y-3">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h1 className="text-3xl font-bold text-slate-950 sm:text-4xl">
@@ -34,8 +39,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        <CategoryList categories={categories} />
 
         <ProductGrid products={products} categoryLabel="alle producten" />
       </main>

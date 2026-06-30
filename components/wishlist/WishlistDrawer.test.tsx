@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { WishlistDrawer } from "@/components/WishlistDrawer";
+import { WishlistDrawer } from "@/components/wishlist/WishlistDrawer";
 
 const closeDrawerMock = jest.fn();
 
@@ -24,7 +24,7 @@ jest.mock("@/hooks/useWishlist", () => ({
   }),
 }));
 
-jest.mock("@/components/WishlistItem", () => ({
+jest.mock("@/components/wishlist/WishlistItem", () => ({
   WishlistItem: ({ item }: { item: { product: { title: string } } }) => (
     <li data-testid="wishlist-item">{item.product.title}</li>
   ),

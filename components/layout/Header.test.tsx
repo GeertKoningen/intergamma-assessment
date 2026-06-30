@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/layout/Header";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 

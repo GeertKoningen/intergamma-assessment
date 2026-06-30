@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CategoryHeader } from "@/components/CategoryHeader";
+import { CategoryHeader } from "@/components/categories/CategoryHeader";
 
 jest.mock("next/link", () => ({
   __esModule: true,

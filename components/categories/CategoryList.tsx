@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Category } from "@/lib/types";
-import { CategoryCard } from "@/components/CategoryCard";
+import { CategoryCard } from "@/components/categories/CategoryCard";
 
 export function CategoryList({ categories }: { categories: Category[] }) {
   const scrollerRef = useRef<HTMLUListElement | null>(null);

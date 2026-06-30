@@ -1,5 +1,5 @@
 import { act, render, screen } from "@testing-library/react";
-import { WishlistTrigger } from "@/components/WishlistTrigger";
+import { WishlistTrigger } from "@/components/wishlist/WishlistTrigger";
 
 const openDrawerMock = jest.fn();
 

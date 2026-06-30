@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { WishlistButton } from "@/components/WishlistButton";
+import { WishlistButton } from "@/components/wishlist/WishlistButton";
 
 const toggleWishlistMock = jest.fn();
 

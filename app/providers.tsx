@@ -5,7 +5,10 @@ import dynamic from "next/dynamic";
 import { WishlistProvider } from "@/context/WishlistContext";
 
 const WishlistDrawer = dynamic(
-  () => import("@/components/WishlistDrawer").then((mod) => mod.WishlistDrawer),
+  () =>
+    import("@/components/wishlist/WishlistDrawer").then(
+      (mod) => mod.WishlistDrawer,
+    ),
   { ssr: false },
 );
 

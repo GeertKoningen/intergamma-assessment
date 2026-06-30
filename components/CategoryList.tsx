@@ -23,7 +23,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
   };
 
   return (
-    <section aria-labelledby="categories-heading" className="space-y-4">
+    <section aria-labelledby="categories-heading" className="space-y-4 ">
       <div className="flex items-end justify-between gap-4">
         <div>
           <h2
@@ -35,7 +35,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
         </div>
       </div>
 
-      <div className="overflow-x-hidden">
+      <div className="">
         <div className="flex items-center justify-between gap-3 border-b border-[#ececec] px-4 py-4">
           <div className="flex items-center gap-2">
             <button

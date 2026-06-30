@@ -36,7 +36,6 @@ describe("ProductCard", () => {
           slug: "boormachine",
           category: "Gereedschap",
         }}
-        categoryLabel="Gereedschap"
       />,
     );
 

@@ -75,7 +75,7 @@ describe("WishlistItem", () => {
     );
     expect(decreaseQuantityMock).toHaveBeenCalledWith("boormachine");
 
-    const quantityInput = screen.getByRole("textbox", {
+    const quantityInput = screen.getByRole("spinbutton", {
       name: "Quantity for Boormachine",
     });
     fireEvent.change(quantityInput, { target: { value: "5" } });

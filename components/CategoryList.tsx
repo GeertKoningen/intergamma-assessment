@@ -42,7 +42,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
               ref={prevButtonRef}
               type="button"
               aria-label="Previous categories"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 shadow-sm transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
+              className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
               disabled={isBeginning}
             >
               <svg
@@ -61,7 +61,7 @@ export function CategoryList({ categories }: { categories: Category[] }) {
               ref={nextButtonRef}
               type="button"
               aria-label="Next categories"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 shadow-sm transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
+              className="shadow inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e1e1] bg-white text-slate-700 transition hover:border-[#d1d1d1] hover:bg-[#fafafa] disabled:cursor-not-allowed disabled:opacity-40"
               disabled={isEnd}
             >
               <svg

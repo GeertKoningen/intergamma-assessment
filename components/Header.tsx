@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 bg-white/95 shadow-[0_2px_8px_rgba(17,24,39,0.06)] backdrop-blur supports-[backdrop-filter]:bg-white/90">
+    <header className="shadow sticky top-0 z-30 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a
           href="#top"
@@ -28,7 +28,7 @@ export function Header() {
           aria-expanded={false}
           aria-haspopup="dialog"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e03126] text-white shadow-sm">
+          <span className="shadow flex h-8 w-8 items-center justify-center rounded-full bg-[#e03126] text-white">
             <svg
               viewBox="0 0 24 24"
               className="h-4 w-4 fill-current"

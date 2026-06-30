@@ -50,3 +50,9 @@
 	}
 }
 
+@layer utilities {
+	.shadow {
+		box-shadow: 0 4px 20px 0 #0000001a;
+	}
+}
+

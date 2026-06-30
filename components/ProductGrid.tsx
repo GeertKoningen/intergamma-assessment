@@ -13,7 +13,10 @@ export function ProductGrid({
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
           <li key={product.slug}>
-            <ProductCard product={product} />
+            <ProductCard
+              product={product}
+              prioritizeImage={product.slug === products[0]?.slug}
+            />
           </li>
         ))}
       </ul>

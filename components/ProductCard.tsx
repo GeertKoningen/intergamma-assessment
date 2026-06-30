@@ -4,7 +4,15 @@ import type { Product } from "@/lib/types";
 import { Pricetag } from "@/components/Pricetag";
 import { WishlistButton } from "@/components/WishlistButton";
 
-export function ProductCard({ product }: { product: Product }) {
+type ProductCardProps = {
+  product: Product;
+  prioritizeImage?: boolean;
+};
+
+export function ProductCard({
+  product,
+  prioritizeImage = false,
+}: ProductCardProps) {
   return (
     <Link
       href={`/producten/${product.slug}`}
@@ -18,6 +26,8 @@ export function ProductCard({ product }: { product: Product }) {
             alt={product.title}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            loading={prioritizeImage ? "eager" : undefined}
+            fetchPriority={prioritizeImage ? "high" : undefined}
             className="object-cover"
           />
         </div>

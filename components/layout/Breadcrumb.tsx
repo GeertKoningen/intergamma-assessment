@@ -7,7 +7,7 @@ type BreadcrumbProps = {
 
 export function Breadcrumb({ categoryLabel, categoryHref }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
+    <nav aria-label="Broodkruimelpad" className="text-sm text-slate-500">
       <ol className="flex items-center gap-2">
         <li>
           <Link href="/" className="hover:underline">

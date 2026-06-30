@@ -45,7 +45,7 @@ export function WishlistTrigger() {
       type="button"
       onClick={openDrawer}
       className={`relative inline-flex h-11 items-center gap-3 rounded-full border bg-secondary px-3 text-sm font-semibold text-white transition hover:bg-primary cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#0b0b0b] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${isHighlighting ? "animate-wishlist-trigger-highlight" : ""}`}
-      aria-label={`Open wishlist, ${totalItems} items`}
+      aria-label={`Bekijk wensenlijst, ${totalItems} artikelen`}
       aria-expanded={isDrawerOpen}
       aria-haspopup="dialog"
     >

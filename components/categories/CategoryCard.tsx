@@ -15,7 +15,7 @@ export function CategoryCard({
   return (
     <Link
       href={`/${toCategorySlug(category.label)}`}
-      className=" group block h-full rounded-lg border hover:border-[#ccc] border-[#ececec] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2 transition duration-300"
+      className="group block h-full rounded-lg border hover:border-[#ccc] border-[#ececec] bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2 transition duration-300"
       aria-label={`Bekijk categorie ${category.label}`}
     >
       <article>

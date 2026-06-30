@@ -35,7 +35,7 @@ describe("Header", () => {
     expect(screen.getByAltText("Intergamma")).toBeInTheDocument();
 
     const wishlistButton = screen.getByRole("button", {
-      name: "Open wishlist, 2 items",
+      name: "Bekijk wensenlijst, 2 artikelen",
     });
     expect(wishlistButton).toHaveAttribute("aria-expanded", "false");
     expect(screen.getByText("2")).toBeInTheDocument();

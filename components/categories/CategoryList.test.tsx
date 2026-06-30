@@ -46,10 +46,10 @@ describe("CategoryList", () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole("button", { name: "Previous categories" }),
+      screen.getByRole("button", { name: "Vorige categorieën" }),
     ).toBeDisabled();
     expect(
-      screen.getByRole("button", { name: "Next categories" }),
+      screen.getByRole("button", { name: "Volgende categorieën" }),
     ).toBeEnabled();
 
     expect(screen.getAllByTestId("category-card")).toHaveLength(2);

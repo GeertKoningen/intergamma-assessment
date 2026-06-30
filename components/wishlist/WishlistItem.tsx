@@ -74,7 +74,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
               decreaseQuantity(item.product.slug);
             }}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-secondary hover:bg-primary text-white text-lg transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2"
-            aria-label={`Decrease quantity for ${item.product.title}`}
+            aria-label={`Verlaag aantal voor ${item.product.title}`}
           >
             -
           </button>
@@ -90,7 +90,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
 
               setQuantity(item.product.slug, parsedQuantity);
             }}
-            aria-label={`Quantity for ${item.product.title}`}
+            aria-label={`Aantal voor ${item.product.title}`}
             className="h-9 w-16 rounded-full border border-slate-200 bg-tertiary text-center text-sm text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2"
           />
           <button
@@ -99,7 +99,7 @@ export function WishlistItem({ item }: { item: WishlistItemType }) {
               increaseQuantity(item.product.slug);
             }}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-secondary hover:bg-primary text-white text-lg transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b0b0b] focus-visible:ring-offset-2"
-            aria-label={`Increase quantity for ${item.product.title}`}
+            aria-label={`Bestel nog een ${item.product.title}`}
           >
             +
           </button>

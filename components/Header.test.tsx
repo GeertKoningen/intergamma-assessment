@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { Header } from "@/components/Header";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
@@ -18,17 +18,29 @@ jest.mock("next/image", () => ({
   },
 }));
 
+const openDrawerMock = jest.fn();
+
+jest.mock("@/hooks/useWishlist", () => ({
+  useWishlist: () => ({
+    totalItems: 2,
+    isDrawerOpen: false,
+    openDrawer: openDrawerMock,
+  }),
+}));
+
 describe("Header", () => {
-  it("renders logo and wishlist button state", () => {
+  it("renders logo, shows wishlist count, and opens drawer", () => {
     render(<Header />);
 
     expect(screen.getByAltText("Intergamma")).toBeInTheDocument();
 
     const wishlistButton = screen.getByRole("button", {
-      name: "Open wishlist, 0 items",
+      name: "Open wishlist, 2 items",
     });
     expect(wishlistButton).toHaveAttribute("aria-expanded", "false");
+    expect(screen.getByText("2")).toBeInTheDocument();
 
-    expect(screen.getByText("0")).toBeInTheDocument();
+    fireEvent.click(wishlistButton);
+    expect(openDrawerMock).toHaveBeenCalledTimes(1);
   });
 });

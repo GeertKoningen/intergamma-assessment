@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useWishlist } from "@/hooks/useWishlist";
 
 export function Header() {
+  const { totalItems, isDrawerOpen, openDrawer } = useWishlist();
+
   return (
     <header className="shadow sticky top-0 z-30 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
@@ -23,9 +26,10 @@ export function Header() {
 
         <button
           type="button"
+          onClick={openDrawer}
           className="relative inline-flex h-11 items-center gap-3 rounded-full border border-[#e5e5e5] bg-white px-4 pr-5 text-sm font-semibold text-slate-700 transition hover:border-[#d6d6d6] hover:bg-[#fafafa]"
-          aria-label={`Open wishlist, 0 items`}
-          aria-expanded={false}
+          aria-label={`Open wishlist, ${totalItems} items`}
+          aria-expanded={isDrawerOpen}
           aria-haspopup="dialog"
         >
           <span className="shadow flex h-8 w-8 items-center justify-center rounded-full bg-[#e03126] text-white">
@@ -42,7 +46,7 @@ export function Header() {
             className="inline-flex min-w-8 items-center justify-center rounded-full bg-[#f3f3f3] px-2 py-1 text-xs font-bold text-slate-700"
             aria-live="polite"
           >
-            0
+            {totalItems}
           </span>
         </button>
       </div>

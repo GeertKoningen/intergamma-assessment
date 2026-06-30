@@ -3,6 +3,12 @@ import { ProductCard } from "@/components/ProductCard";
 
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 
+jest.mock("@/components/WishlistButton", () => ({
+  WishlistButton: ({ product }: { product: { title: string } }) => (
+    <button type="button">Add {product.title} to wishlist</button>
+  ),
+}));
+
 jest.mock("next/image", () => ({
   __esModule: true,
   default: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
@@ -30,6 +36,7 @@ describe("ProductCard", () => {
           slug: "boormachine",
           category: "Gereedschap",
         }}
+        categoryLabel="Gereedschap"
       />,
     );
 
@@ -40,5 +47,10 @@ describe("ProductCard", () => {
       screen.getByText("Compacte accuboormachine voor dagelijks gebruik."),
     ).toBeInTheDocument();
     expect(screen.getByAltText("Boormachine")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", {
+        name: "Add Boormachine to wishlist",
+      }),
+    ).toBeInTheDocument();
   });
 });

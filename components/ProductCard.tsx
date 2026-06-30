@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/lib/types";
+import { Pricetag } from "@/components/Pricetag";
+import { WishlistButton } from "@/components/WishlistButton";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -26,6 +28,12 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="line-clamp-2 text-sm text-slate-500">
             {product.description}
           </p>
+
+          <div className="mt-auto flex items-center justify-between gap-3 border-t border-white/10 pt-4">
+            <Pricetag price={product.price} />
+
+            <WishlistButton product={product} />
+          </div>
         </div>
       </article>
     </Link>

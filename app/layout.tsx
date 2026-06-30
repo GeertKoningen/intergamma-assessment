@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("h-full", ptSans.variable, "font-sans")}>
-      <body className="min-h-full bg-white">
+      <body className="min-h-full bg-white overflow-x-hidden">
         <Providers>{children}</Providers>
       </body>
     </html>

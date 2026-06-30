@@ -10,7 +10,7 @@
   {
     "title": "Eco Beits 2",
     "description": "Eco Beits 2 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint2.jpg",
     "price": 90.39,
     "slug": "eco-beits-2",
     "category": "paint"
@@ -18,7 +18,7 @@
   {
     "title": "Compact Spuitlak 3",
     "description": "Compact Spuitlak 3 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint3.jpg",
     "price": 155.55,
     "slug": "compact-spuitlak-3",
     "category": "paint"
@@ -34,7 +34,7 @@
   {
     "title": "Sterk Lak 5",
     "description": "Sterk Lak 5 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint2.jpg",
     "price": 78.55,
     "slug": "sterk-lak-5",
     "category": "paint"
@@ -42,7 +42,7 @@
   {
     "title": "Compact Beits 6",
     "description": "Compact Beits 6 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint3.jpg",
     "price": 292.44,
     "slug": "compact-beits-6",
     "category": "paint"
@@ -58,7 +58,7 @@
   {
     "title": "Premium Lak 8",
     "description": "Premium Lak 8 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint2.jpg",
     "price": 62.55,
     "slug": "premium-lak-8",
     "category": "paint"
@@ -66,7 +66,7 @@
   {
     "title": "Mat Muurverf 9",
     "description": "Mat Muurverf 9 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint3.jpg",
     "price": 95.42,
     "slug": "mat-muurverf-9",
     "category": "paint"
@@ -82,7 +82,7 @@
   {
     "title": "Basic Lak 11",
     "description": "Basic Lak 11 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint2.jpg",
     "price": 67.62,
     "slug": "basic-lak-11",
     "category": "paint"
@@ -90,7 +90,7 @@
   {
     "title": "Mat Spuitlak 12",
     "description": "Mat Spuitlak 12 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-paint.jpg",
+    "image": "/products/dummy-paint3.jpg",
     "price": 186.73,
     "slug": "mat-spuitlak-12",
     "category": "paint"
@@ -106,7 +106,7 @@
   {
     "title": "Comfort Stanleymes 14",
     "description": "Comfort Stanleymes 14 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools2.jpg",
     "price": 165.93,
     "slug": "comfort-stanleymes-14",
     "category": "tools"
@@ -114,7 +114,7 @@
   {
     "title": "Glans Hamer 15",
     "description": "Glans Hamer 15 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools3.jpg",
     "price": 252.38,
     "slug": "glans-hamer-15",
     "category": "tools"
@@ -130,7 +130,7 @@
   {
     "title": "Basic Hamer 17",
     "description": "Basic Hamer 17 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools2.jpg",
     "price": 270.16,
     "slug": "basic-hamer-17",
     "category": "tools"
@@ -138,7 +138,7 @@
   {
     "title": "Deluxe Schroevendraaier 18",
     "description": "Deluxe Schroevendraaier 18 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools3.jpg",
     "price": 16.43,
     "slug": "deluxe-schroevendraaier-18",
     "category": "tools"
@@ -154,7 +154,7 @@
   {
     "title": "Universeel Schroevendraaier 20",
     "description": "Universeel Schroevendraaier 20 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools2.jpg",
     "price": 67.95,
     "slug": "universeel-schroevendraaier-20",
     "category": "tools"
@@ -162,7 +162,7 @@
   {
     "title": "Eco Hamer 21",
     "description": "Eco Hamer 21 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools3.jpg",
     "price": 172.8,
     "slug": "eco-hamer-21",
     "category": "tools"
@@ -178,7 +178,7 @@
   {
     "title": "Compact Waterpas 23",
     "description": "Compact Waterpas 23 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools2.jpg",
     "price": 141.38,
     "slug": "compact-waterpas-23",
     "category": "tools"
@@ -186,7 +186,7 @@
   {
     "title": "Comfort Waterpas 24",
     "description": "Comfort Waterpas 24 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-tools.jpg",
+    "image": "/products/dummy-tools3.jpg",
     "price": 133.51,
     "slug": "comfort-waterpas-24",
     "category": "tools"
@@ -202,7 +202,7 @@
   {
     "title": "Mat Isolatiefolie 26",
     "description": "Mat Isolatiefolie 26 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation2.jpg",
     "price": 215.45,
     "slug": "mat-isolatiefolie-26",
     "category": "isolation"
@@ -210,7 +210,7 @@
   {
     "title": "Glans Isolatieplaat 27",
     "description": "Glans Isolatieplaat 27 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation3.jpg",
     "price": 20.3,
     "slug": "glans-isolatieplaat-27",
     "category": "isolation"
@@ -226,7 +226,7 @@
   {
     "title": "Heavy Duty Isolatiefolie 29",
     "description": "Heavy Duty Isolatiefolie 29 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation2.jpg",
     "price": 19.83,
     "slug": "heavy-duty-isolatiefolie-29",
     "category": "isolation"
@@ -234,7 +234,7 @@
   {
     "title": "Compact Steenwol 30",
     "description": "Compact Steenwol 30 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation3.jpg",
     "price": 171.09,
     "slug": "compact-steenwol-30",
     "category": "isolation"
@@ -250,7 +250,7 @@
   {
     "title": "Plus PUR-schuim 32",
     "description": "Plus PUR-schuim 32 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation2.jpg",
     "price": 6.91,
     "slug": "plus-pur-schuim-32",
     "category": "isolation"
@@ -258,7 +258,7 @@
   {
     "title": "Compact Isolatieplaat 33",
     "description": "Compact Isolatieplaat 33 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation3.jpg",
     "price": 215.29,
     "slug": "compact-isolatieplaat-33",
     "category": "isolation"
@@ -274,7 +274,7 @@
   {
     "title": "Glans Steenwol 35",
     "description": "Glans Steenwol 35 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation2.jpg",
     "price": 77.62,
     "slug": "glans-steenwol-35",
     "category": "isolation"
@@ -282,7 +282,7 @@
   {
     "title": "Universeel Glaswol 36",
     "description": "Universeel Glaswol 36 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-isolation.jpg",
+    "image": "/products/dummy-isolation3.jpg",
     "price": 51.18,
     "slug": "universeel-glaswol-36",
     "category": "isolation"
@@ -298,7 +298,7 @@
   {
     "title": "Premium MDF plaat 38",
     "description": "Premium MDF plaat 38 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood2.jpg",
     "price": 204.73,
     "slug": "premium-mdf-plaat-38",
     "category": "wood"
@@ -306,7 +306,7 @@
   {
     "title": "Sterk Hardhouten balk 39",
     "description": "Sterk Hardhouten balk 39 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood3.jpg",
     "price": 183.31,
     "slug": "sterk-hardhouten-balk-39",
     "category": "wood"
@@ -322,7 +322,7 @@
   {
     "title": "Mat Hardhouten balk 41",
     "description": "Mat Hardhouten balk 41 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood2.jpg",
     "price": 243.11,
     "slug": "mat-hardhouten-balk-41",
     "category": "wood"
@@ -330,7 +330,7 @@
   {
     "title": "Mat Hardhouten balk 42",
     "description": "Mat Hardhouten balk 42 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood3.jpg",
     "price": 94.99,
     "slug": "mat-hardhouten-balk-42",
     "category": "wood"
@@ -346,7 +346,7 @@
   {
     "title": "Universeel Multiplex plaat 44",
     "description": "Universeel Multiplex plaat 44 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood2.jpg",
     "price": 184.83,
     "slug": "universeel-multiplex-plaat-44",
     "category": "wood"
@@ -354,7 +354,7 @@
   {
     "title": "Sterk MDF plaat 45",
     "description": "Sterk MDF plaat 45 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood3.jpg",
     "price": 99.8,
     "slug": "sterk-mdf-plaat-45",
     "category": "wood"
@@ -370,7 +370,7 @@
   {
     "title": "Mat Multiplex plaat 47",
     "description": "Mat Multiplex plaat 47 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood2.jpg",
     "price": 208.84,
     "slug": "mat-multiplex-plaat-47",
     "category": "wood"
@@ -378,7 +378,7 @@
   {
     "title": "Pro MDF plaat 48",
     "description": "Pro MDF plaat 48 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-wood.jpg",
+    "image": "/products/dummy-wood3.jpg",
     "price": 290.11,
     "slug": "pro-mdf-plaat-48",
     "category": "wood"
@@ -682,7 +682,7 @@
   {
     "title": "Universeel Keukenkraan 86",
     "description": "Universeel Keukenkraan 86 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen2.jpg",
     "price": 97.23,
     "slug": "universeel-keukenkraan-86",
     "category": "bathroom-kitchen"
@@ -690,7 +690,7 @@
   {
     "title": "Basic Wastafel 87",
     "description": "Basic Wastafel 87 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen3.jpg",
     "price": 124.28,
     "slug": "basic-wastafel-87",
     "category": "bathroom-kitchen"
@@ -706,7 +706,7 @@
   {
     "title": "Premium Wastafelkraan 89",
     "description": "Premium Wastafelkraan 89 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen2.jpg",
     "price": 200.8,
     "slug": "premium-wastafelkraan-89",
     "category": "bathroom-kitchen"
@@ -714,7 +714,7 @@
   {
     "title": "Universeel Doucheset 90",
     "description": "Universeel Doucheset 90 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen3.jpg",
     "price": 40.92,
     "slug": "universeel-doucheset-90",
     "category": "bathroom-kitchen"
@@ -730,7 +730,7 @@
   {
     "title": "Sterk Wastafel 92",
     "description": "Sterk Wastafel 92 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen2.jpg",
     "price": 232.69,
     "slug": "sterk-wastafel-92",
     "category": "bathroom-kitchen"
@@ -738,7 +738,7 @@
   {
     "title": "Compact Doucheset 93",
     "description": "Compact Doucheset 93 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen3.jpg",
     "price": 115.25,
     "slug": "compact-doucheset-93",
     "category": "bathroom-kitchen"
@@ -754,7 +754,7 @@
   {
     "title": "Plus Wastafelkraan 95",
     "description": "Plus Wastafelkraan 95 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen2.jpg",
     "price": 20.25,
     "slug": "plus-wastafelkraan-95",
     "category": "bathroom-kitchen"
@@ -762,7 +762,7 @@
   {
     "title": "Glans Doucheset 96",
     "description": "Glans Doucheset 96 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen3.jpg",
     "price": 271.93,
     "slug": "glans-doucheset-96",
     "category": "bathroom-kitchen"
@@ -778,7 +778,7 @@
   {
     "title": "Premium Wastafelkraan 98",
     "description": "Premium Wastafelkraan 98 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen2.jpg",
     "price": 181.58,
     "slug": "premium-wastafelkraan-98",
     "category": "bathroom-kitchen"
@@ -786,7 +786,7 @@
   {
     "title": "Heavy Duty Wastafel 99",
     "description": "Heavy Duty Wastafel 99 van hoogwaardige kwaliteit, geschikt voor diverse klussen in en om het huis.",
-    "image": "/products/dummy-bathroom-kitchen.jpg",
+    "image": "/products/dummy-bathroom-kitchen3.jpg",
     "price": 174.48,
     "slug": "heavy-duty-wastafel-99",
     "category": "bathroom-kitchen"
